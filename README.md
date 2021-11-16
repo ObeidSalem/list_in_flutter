@@ -18,6 +18,7 @@ In this assignment, you will create:
 So if 1 is entered in the textbox, than, display apple.
 Create a github, and submit the link to your repo for this assignment.
 
-Screanshots from the App
+![Screenshot 2021-11-16 170705](https://user-images.githubusercontent.com/86645986/141979722-4f924c34-c847-46a9-a0e5-28e8317de918.png)
+![Screenshot 2021-11-16 170809](https://user-images.githubusercontent.com/86645986/141979980-656eff64-c2d8-4d69-88e0-3ac5991b0731.png)
+![Screenshot 2021-11-16 170827](https://user-images.githubusercontent.com/86645986/141980014-97e5a015-528d-473a-931b-37aff726e977.png)
 
-![alt text](G:/Desktop/IIUM/Semester 5/2 MAD/Assignment 1 List/Screenshot 2021-11-16 170705.png)
