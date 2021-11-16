@@ -30,9 +30,10 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   var fruitIndex = 0;
+  String dropDownValue = "Choose Fruit";
 
   @override
-  var fruitList = [" ", "apple", "orange", "rambutan"];
+  var fruitList = [" ", "Apple", "Orange", "Rambutan"];
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
@@ -52,13 +53,13 @@ class MyAppState extends State<MyApp> {
               fontFamily: 'Hind'
           ),
         ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            textStyle: TextStyle(
-              fontSize: 30,
-            ),
-          ),
-        ),
+        // elevatedButtonTheme: ElevatedButtonThemeData(
+        //   style: ElevatedButton.styleFrom(
+        //     textStyle: const TextStyle(
+        //       fontSize: 30,
+        //     ),
+        //   ),
+        // ),
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -69,30 +70,61 @@ class MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('${fruitList[fruitIndex]}\n\n'),
-              ElevatedButton(child: Text('   apple    '), onPressed: () => {
-                setState(() {
-                  fruitIndex = 1;
-                }),
-                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-              }),
-              ElevatedButton(child: Text('  orange   '),onPressed: () => {
-                setState(() {
-                  fruitIndex = 2;
-                }),
-                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-              }),
-              ElevatedButton(child: Text('rambutan'),onPressed: () => {
-                setState(() {
-                  fruitIndex = 3;
-                }),
-                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-              }),
-              ElevatedButton(child: Text('    Clear    '),onPressed: () => {
-                setState(() {
-                  fruitIndex = 0;
-                }),
-                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-              }),
+              DropdownButton<String>(
+                value: dropDownValue,
+                icon: const Icon(Icons.arrow_downward),
+                iconSize: 34,
+                elevation: 16,
+                style: const TextStyle(color: Colors.purple, fontSize: 25),
+                underline: Container(
+                  height: 2,
+                  color: Colors.purple,
+                ),
+                items: <String>['Choose Fruit', "Apple", "Orange", "Rambutan"].map((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropDownValue = newValue!;
+                    if (newValue == 'Choose Fruit')
+                      fruitIndex = 0;
+                    else if (newValue==fruitList[1])
+                      fruitIndex = 1;
+                    else if (newValue==fruitList[2])
+                      fruitIndex = 2;
+                    else if (newValue==fruitList[3])
+                      fruitIndex = 3;
+                    else
+                      fruitIndex = 0;
+                  });
+                },              )
+              // ElevatedButton(child: Text('   apple    '), onPressed: () => {
+              //   setState(() {
+              //     fruitIndex = 1;
+              //   }),
+              //   print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+              // }),
+              // ElevatedButton(child: Text('  orange   '),onPressed: () => {
+              //   setState(() {
+              //     fruitIndex = 2;
+              //   }),
+              //   print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+              // }),
+              // ElevatedButton(child: Text('rambutan'),onPressed: () => {
+              //   setState(() {
+              //     fruitIndex = 3;
+              //   }),
+              //   print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+              // }),
+              // ElevatedButton(child: Text('    Clear    '),onPressed: () => {
+              //   setState(() {
+              //     fruitIndex = 0;
+              //   }),
+              //   print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+              // }),
             ],
           ),
         ),
