@@ -114,7 +114,7 @@ class MyAppState extends State<MyApp> {
                           height: 2,
                           color: Colors.purple,
                         ),
-                        items: <String>['Select Fruit', "Apple", "Orange", "Rambutan"].map((String value) {
+                        items: fruitList.map((String value) {
                           return DropdownMenuItem<String>(
                             value: value,
                             child: Text(value),
@@ -151,39 +151,57 @@ class MyAppState extends State<MyApp> {
                   child: Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ElevatedButton(child: Text('   apple    '), onPressed: () => {
-                            setState(() {
-                              fruitIndex = 1;
-                            }),
-                            print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-                          }),
-
-                          ElevatedButton(child: Text('  orange   '),onPressed: () => {
-                            setState(() {
-                              fruitIndex = 2;
-                            }),
-                            print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-                          }),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  fixedSize: const Size(150, 40),
+                              ),
+                              child: Text(fruitList[1]),
+                              onPressed: () => {
+                                setState(() {
+                                  fruitIndex = 1;
+                                }),
+                                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+                              }),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(150, 40),
+                              ),
+                              child: Text(fruitList[2]),
+                              onPressed: () => {
+                                setState(() {
+                                  fruitIndex = 2;
+                                }),
+                                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+                              }),
                         ],
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ElevatedButton(child: Text('rambutan'),onPressed: () => {
-                            setState(() {
-                              fruitIndex = 3;
-                            }),
-                            print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-                          }),
-
-                          ElevatedButton(child: Text('    Clear    '),onPressed: () => {
-                            setState(() {
-                              fruitIndex = 0;
-                            }),
-                            print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
-                          }),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(150, 40),
+                              ),
+                              child: Text(fruitList[3]),
+                              onPressed: () => {
+                                setState(() {
+                                  fruitIndex = 3;
+                                }),
+                                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+                              }),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                fixedSize: const Size(150, 40),
+                              ),
+                              child: Text('Clear'),
+                              onPressed: () => {
+                                setState(() {
+                                  fruitIndex = 0;
+                                }),
+                                print('Button Pressed, fruitIndex value is ${fruitIndex} now'),
+                              }),
                         ],
                       ),
                     ],
