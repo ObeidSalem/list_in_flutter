@@ -18,6 +18,6 @@ In this assignment, you will create:
 So if 1 is entered in the textbox, than, display apple.
 Create a github, and submit the link to your repo for this assignment.
 
-![Screenshot 2021-11-16 170809](https://user-images.githubusercontent.com/86645986/142017497-eeff8980-2042-427e-b58c-b65d7237656d.png)
-![Screenshot 2021-11-16 170705](https://user-images.githubusercontent.com/86645986/142017534-4d718832-958c-49b8-9244-87026f08f0d9.png)
-![Screenshot 2021-11-16 170827](https://user-images.githubusercontent.com/86645986/142017544-0f97a385-72a8-40c2-b673-6f6d09b7482a.png)
+![Screenshot 2021-11-16 170705](https://user-images.githubusercontent.com/86645986/142151060-e2df7685-df96-4024-907b-d8cd84edc062.png)
+![Screenshot 2021-11-16 170809](https://user-images.githubusercontent.com/86645986/142151065-caa2243a-fb03-4ea3-9058-d0b95a5d3292.png)
+![Screenshot 2021-11-16 170827](https://user-images.githubusercontent.com/86645986/142151068-659f471a-fd7a-425a-8db2-3aa17a5fec37.png)
